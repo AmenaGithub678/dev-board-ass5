@@ -40,6 +40,50 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+ 
+// update task & value count
+function updateTaskCount() {
+    
+    const taskCountElement = document.getElementById("taskVal");  
+    let taskCount = getInputValueByID("taskVal"); 
+
+    const  totalTaskElement = document.getElementById("total-task");
+    let totalCount = getInputValueByID("total-task");
+
+
+    const completeButtons = document.getElementsByClassName("collect-btn");  
+
+ 
+    for (let i = 0; i < completeButtons.length; i++) {
+        completeButtons[i].addEventListener("click", function () {
+            alert("Board update successfully");
+
+         
+            this.disabled = true;
+            this.style.backgroundColor = "gray";  
+
+           
+            taskCount -= 1;
+            taskCountElement.textContent = taskCount;
+
+            totalCount +=1;
+            totalTaskElement.textContent = totalCount;
+
+
+            if (taskCount === 0) {
+                alert(" Congrats! You have completed all the current tasks!");
+            }
+        });
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    updateTaskCount();  
+});
+
+
+
 
 
 
