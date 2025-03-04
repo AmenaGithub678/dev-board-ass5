@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog page</title>
+
+<!-- daisyUi cdn link add here -->
+<link
+href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css"
+rel="stylesheet"
+type="text/css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- custom css -->
+
+
+
+
+</head>
+<body class="bg-gray-100 max-w-screen-2xl mx-auto py-2">
+
+  <header class="w-11/12 mx-auto">
+    <nav class="flex justify-between items-center bg-white p-2 rounded-xl">
+      <div class="flex items-center gap-2">
+        <figure class="">
+          <img src="image/assets/logo.png" alt="logo" class="w-full" />
+        </figure>
+        <h3 class="text-xl lg:text-4xl">
+          Dev<span class="font-extrabold">Board</span>
+        </h3>
+      </div>
+      <div class="flex items-center gap-5 p-2">
+      
+
+        <figure>
+         
+          <button class="btn btn-primary" id="backBtn">Back to Desktop</button>
+        </figure>
+      </div>
+    </nav>
+  </header>
+
+<main class="w-11/12 mx-auto">
+
+<div class="flex max-w-screen-2xl flex-col mb-10 " >
+    <!-- que-1 -->
+     <h1 class="font-bold text-2xl text-black  flex align-center justify-center mt-5 ">Blogs</h1>
+        <div class="card bg-white rounded-box grid px-9 py-4 mt-10">
+           <h2 class="text-black font-bold text-2xl"> Question-1: What are the different ways to select an element in the DOM?</h2>
+           <div class="divider"></div>
+           <p>
+            <ul>
+                <li>1.Using getElementById - Method--- document.getElementById("id-name"); </li>
+                <li>2.Using getElementsByClassName -  Method--- document.getElementsByClassName(" class-name"); </li>
+                <li>3.Using getElementsByTagName -  Method--- document.getElementsByTagName("any kind of tag"); </li>
+                <li>4.Using querySelector -   specified CSS selector like (id, class names, types, attributes, values of attributes, etc) Method--- </li>
+                <li>5.Using querySelectorAll -
+
+                    Method--- document.querySelectorAll("p.intro");
+                </li>
+            </ul>
+           </p>
+        </div>
+     
+      </div>
+
+ <!-- que-2 -->
+      <div class="flex w-full flex-col mb-10">
+        <div class="card bg-white rounded-box grid px-9 py-4">
+           <h2 class="text-black font-bold text-2xl">
+            Question-2: What is the difference between innerHTML, innerText, and textContent ?</h2>
+           <div class="divider"></div>
+           <p>InnerHTML, innerText, and textContent are the properties of the DOM (Document Object Model). They allow  to read and update the content of HTML elements.</p>
+            <ul>
+                <h2>innerHTML</h2>
+                <li> Give output with all text and HTML tags inside an element. </li>
+                </li>
+            </ul>
+
+            <ul>
+                <h2>innerText</h2>
+                <li>returns only text without html tags inside an element. </li>
+            </ul>
+
+            <ul>
+                <h2>textContent</h2>
+                <li>returns all text, including hidden elements,inside an element.</li>
+               
+            </ul>
+           
+        </div>
+     
+      </div>
+<!-- que-3 -->
+      <div class="flex w-full flex-col mb-10">
+        <div class="card bg-white rounded-box grid px-9 py-4">
+           <h2 class="text-black font-bold text-2xl"> 
+            Question-3:
+            What is event delegation in the DOM?</h2>
+           <div class="divider"></div>
+           <p>Event delegation is a technique of js where we add <span class="font-bold">evenListener</span> of the parent element. By instead of attaching event listeners to multiple child elements. </p>
+            
+           </p>
+        </div>
+     
+      </div>
+<!-- que-4 -->
+      <div class="flex w-full flex-col mb-10">
+        <div class="card bg-white rounded-box grid px-9 py-4">
+           <h2 class="text-black font-bold text-2xl">
+            Question-4: What is event bubbling in the DOM?</h2>
+           <div class="divider"></div>
+         <p>Event bubbling directs an event to its target</p>
+            <ul>
+                <li>Event start with <span class="font-bold"> child element</span>
+                     and end with <span class="font-bold">parent element</span>. </li>
+                <li>It is a <span class="font-bold">Default behavior</span> of a browser.</li>
+                <li>Event bubbling are stoped by <span>event.stopPropagation()</span> method </li>
+            </ul>
+          
+        </div>
+     
+      </div>
+<!-- que-5 -->
+      <div class="flex w-full flex-col mb-10">
+        <div class="card bg-white rounded-box grid px-9 py-4">
+           <h2 class="text-black font-bold text-2xl"> Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+           <div class="divider"></div>
+           <p></p>
+            <ul>
+                <li>1.Using getElementById - Method--- document.getElementById("id-name"); </li>
+                <li>2.Using getElementsByClassName -  Method--- document.getElementsByClassName(" class-name"); </li>
+                <li>3.Using getElementsByTagName -  Method--- document.getElementsByTagName("any kind of tag"); </li>
+                <li>4.Using querySelector -   specified CSS selector like (id, class names, types, attributes, values of attributes, etc) Method--- </li>
+                <li>5.Using querySelectorAll -
+
+                    Method--- document.querySelectorAll("p.intro");
+                </li>
+            </ul>
+           
+        </div>
+     
+      </div>
+
+    </main>
+<script src="js/script.js"></script>  
+
+</body>
+</html>
