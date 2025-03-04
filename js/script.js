@@ -1,22 +1,44 @@
 
 // Index to blog and blog to index back code.
-document.addEventListener("DOMContentLoaded", function () {
-    const discoverBtn = document.getElementById("discoverBtn");
-    const backBtn = document.getElementById("backBtn");
+ 
+const discoverBtn = document.getElementById("discoverBtn");
+const backBtn = document.getElementById("backBtn");
 
-    if (discoverBtn) {
-        discoverBtn.addEventListener("click", function (event) {
-            window.location.href = "./blog.html";
-        });
+if (discoverBtn) {
+    discoverBtn.addEventListener("click", function (event) {
+        window.location.href = "./blog.html";
+    });
+}
+
+if (backBtn) {
+    backBtn.addEventListener("click", function (event) {
+        window.location.href = "./index.html";
+    });
+}
+
+
+// Background Color Changed
+
+let themeBtn = document.getElementById("themeBtn");
+
+const myChangeColors = ["#B6FFA1", "#16C47F", "#FDAB9E", "#F2E2B1", "#C1D8C3"];
+
+let currentColorIndex = 0;
+
+function myFunc() {
+    
+    changeColor(myChangeColors[currentColorIndex]);
+
+   
+    if (currentColorIndex === myChangeColors.length - 1) {
+        currentColorIndex = 0;  
+    } else {
+        currentColorIndex += 1; 
     }
+}
+themeBtn.addEventListener("click", myFunc);
 
-    if (backBtn) {
-        backBtn.addEventListener("click", function (event) {
-            window.location.href = "./index.html";
-        });
-    }
-});
-
+// Date time change
 
 document.addEventListener("DOMContentLoaded", function () {
     const dayNameElement = document.getElementById("dayName");
@@ -44,11 +66,15 @@ document.addEventListener("DOMContentLoaded", function () {
 // update task & value count
 function updateTaskCount() {
     
-    const taskCountElement = document.getElementById("taskVal");  
-    let taskCount = getInputValueByID("taskVal"); 
+    const taskCountElement = 
+          document.getElementById("taskVal");  
+    let taskCount = 
+        getInputValueByID("taskVal"); 
 
-    const  totalTaskElement = document.getElementById("total-task");
-    let totalCount = getInputValueByID("total-task");
+    const  totalTaskElement = 
+           document.getElementById("total-task");
+    let totalCount = 
+           getInputValueByID("total-task");
 
 
     const completeButtons = document.getElementsByClassName("collect-btn");  
@@ -70,6 +96,8 @@ function updateTaskCount() {
             totalTaskElement.textContent = totalCount;
 
 
+
+
             if (taskCount === 0) {
                 alert(" Congrats! You have completed all the current tasks!");
             }
@@ -81,9 +109,5 @@ function updateTaskCount() {
 document.addEventListener("DOMContentLoaded", function () {
     updateTaskCount();  
 });
-
-
-
-
 
 
